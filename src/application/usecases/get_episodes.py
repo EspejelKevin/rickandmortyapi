@@ -22,7 +22,7 @@ class GetEpisodes:
         episodes_db = self.db_service.get_episodes()
 
         episodes_dto = [EpisodeDTO(id=episode_db.id, name=episode_db.name, episode=episode_db.episode,
-                                 air_date=episode_db.air_date, favorite=episode_db.favorite) for episode_db in episodes_db]
+                                 air_date=episode_db.air_date.strftime('%B %d, %Y'), favorite=episode_db.favorite) for episode_db in episodes_db]
         
         self.log.info('episodes got with success')
         

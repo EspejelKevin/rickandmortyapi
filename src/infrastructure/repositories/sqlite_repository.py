@@ -52,3 +52,8 @@ class SQLiteRepository(DBRepository):
                 return True
         except Exception:
             return False
+
+    def rollback(self):
+        with self.database() as sqlite:
+            session: Session = sqlite.get_session()
+            session.rollback()

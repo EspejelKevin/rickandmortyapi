@@ -2,8 +2,6 @@ from fastapi.routing import APIRouter
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 
-import uuid
-
 from domain import get_settings, EpisodeInput, EpisodeFavoriteInput
 import container
 
@@ -26,6 +24,7 @@ def get_episodes() -> JSONResponse:
         response = use_case.execute()
         return JSONResponse(jsonable_encoder(response, exclude={'status_code'}),
                             status_code=response.status_code)
+
 
 @router.post('/episodes', tags=['Episodes'])
 def create_episode(episode: EpisodeInput) -> JSONResponse:
@@ -59,5 +58,14 @@ def delete_episode(id: int) -> JSONResponse:
     with container.SingletonContainer.scope() as app:
         use_case = app.use_cases.delete_episode()
         response = use_case.execute(id)
+        return JSONResponse(jsonable_encoder(response, exclude={'status_code'}),
+                            status_code=response.status_code)
+
+
+@router.post('/episodes/sync', tags=['Episodes'])
+def sync_episodes() -> JSONResponse:
+    with container.SingletonContainer.scope() as app:
+        use_case = app.use_cases.sync_episodes()
+        response = use_case.execute()
         return JSONResponse(jsonable_encoder(response, exclude={'status_code'}),
                             status_code=response.status_code)

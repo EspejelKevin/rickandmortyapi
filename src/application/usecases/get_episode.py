@@ -26,7 +26,7 @@ class GetEpisode:
             raise ResourceNotFoundError(resource=_id, meta=self.meta)
         
         episode_dto = EpisodeDTO(id=_id, name=episode_db.name, episode=episode_db.episode,
-                                 air_date=episode_db.air_date, favorite=episode_db.favorite)
+                                 air_date=episode_db.air_date.strftime('%B %d, %Y'), favorite=episode_db.favorite)
         
         self.log.info('episode got with success')
         

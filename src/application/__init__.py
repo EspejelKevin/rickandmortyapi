@@ -4,3 +4,4 @@ from .usecases.delete_episode import DeleteEpisode
 from .usecases.get_episode import GetEpisode
 from .usecases.get_episodes import GetEpisodes
 from .usecases.update_episode import UpdateEpisode
+from .usecases.sync_episodes import SyncEpisodes

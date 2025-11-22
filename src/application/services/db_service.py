@@ -22,3 +22,6 @@ class DBService(DBRepository):
     
     def delete_episode_by_id(self, id):
         return self.db_repository.delete_episode_by_id(id)
+    
+    def rollback(self):
+        return self.db_repository.rollback()

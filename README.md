@@ -30,6 +30,7 @@ Ejemplo de contenido:
 export NAMESPACE=management-information
 export RESOURCE=tv
 export URL_DATABASE="sqlite:///rickandmortyapi.db"
+export RICK_MORTY_API_URL="https://rickandmortyapi.com/api/episode"
 ```
 
 Para cargarlas en tu entorno local **(Mac)**:
@@ -47,6 +48,7 @@ Ejemplo de contenido:
 NAMESPACE=management-information
 RESOURCE=tv
 URL_DATABASE="sqlite:///rickandmortyapi.db"
+RICK_MORTY_API_URL="https://rickandmortyapi.com/api/episode"
 ```
 
 ---

@@ -28,7 +28,7 @@ def on_start_up() -> None:
     container.SingletonContainer.init()
 
 app = FastAPI(
-    title='Ticketing System',
+    title='🧩 RICK AND MORTY API',
     openapi_tags=tags,
     on_startup=[on_start_up]
 )

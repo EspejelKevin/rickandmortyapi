@@ -27,3 +27,7 @@ class DBRepository(metaclass=ABCMeta):
     @abstractmethod
     def delete_episode_by_id(self, id: str):
         raise NotImplementedError
+    
+    @abstractmethod
+    def rollback(self):
+        raise NotImplementedError

@@ -12,9 +12,14 @@ class Settings(BaseSettings):
     NAMESPACE: str
     API_VERSION: str = 'v1'
     RESOURCE: str
+    SYNC_EPISODES: bool = False
 
     # DATABASE
     URL_DATABASE: str
+
+    # EXTERNAL API
+    RICK_MORTY_API_URL: str
+    TIMEOUT: float = 30.0
 
 
 @lru_cache()

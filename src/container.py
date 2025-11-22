@@ -6,7 +6,7 @@ from typing import Optional
 from infrastructure import SQLite, SQLiteRepository
 from application import (DBService, CreateEpisode,
                          DeleteEpisode, GetEpisode,
-                         GetEpisodes, UpdateEpisode)
+                         GetEpisodes, UpdateEpisode, SyncEpisodes)
 from domain import Settings
 from log import Formatter, Log
 
@@ -31,6 +31,7 @@ class UseCasesContainer(containers.DeclarativeContainer):
     get_episode = providers.Factory(GetEpisode, db_service=services.db_service, log=log)
     get_episodes = providers.Factory(GetEpisodes, db_service=services.db_service, log=log)
     update_episode = providers.Factory(UpdateEpisode, db_service=services.db_service, log=log)
+    sync_episodes = providers.Factory(SyncEpisodes, db_service=services.db_service, log=log)
 
 
 class AppContainer(containers.DeclarativeContainer):
