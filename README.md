@@ -147,6 +147,7 @@ rickandmortyapi/
 | `GET`  | `/management-information/api/v1/tv/episodes/{id}` | Obtiene los detalles de un episodio |
 | `DELETE`  | `/management-information/api/v1/tv/episodes/{id}` | Elimina un episodio por id |
 | `PATCH`  | `/management-information/api/v1/tv/episodes/{id}/favorite` | Realiza la operación de marcar como favorito un episodio |
+| `POST`  | `/management-information/api/v1/tv/episodes/sync` | Realiza la operación de sincronizar los episodios de la API externa |
 
 ---
 
