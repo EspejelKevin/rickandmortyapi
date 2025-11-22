@@ -179,6 +179,34 @@ Ejemplo de salida:
 
 ---
 
+---
+
+## 🧠 WorkFlow
+
+### 1.- Obtener todos los episodios de la DB
+![1.- Obtener todos los episodios de la DB](./images/get_episodes_endpoint.png)
+
+### 2.- Sincronizar los episodios de la API hacía nuestra DB
+![2.- Sincronizar los episodios de la API hacía nuestra DB](./images/sync_episodes_endpoint.png)
+
+### 3.- Obtener todos los episodios sincronizados
+![3.- Obtener todos los episodios sincronizados](./images/get_episodes_bulked.png)
+
+### 4.- Crear un nuevo episodio
+![3.- Obtener todos los episodios sincronizados](./images/create_episode_endpoint.png)
+
+### 5.- Obtener el episodio creado
+![3.- Obtener todos los episodios sincronizados](./images/get_episode_endpoint.png)
+
+### 6.- Actualizar el episodio (marcarlo como favorito)
+![3.- Obtener todos los episodios sincronizados](./images/update_episode_endpoint.png)
+
+### 7.- Obtener el episodio actualizado
+![3.- Obtener todos los episodios sincronizados](./images/get_episode_updated_endpoint.png)
+
+### 8.- Eliminar el episodio
+![3.- Obtener todos los episodios sincronizados](./images/delete_episode_endpoint.png)
+
 ## ✨ Autor
 
 **Kevin Espejel**  
